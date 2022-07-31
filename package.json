@@ -1,0 +1,34 @@
+{
+  "name": "reaction_engines",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "data:import": "DEBUG=app:seeder node seeder.js -import",
+    "start": "node server.js",
+    "dev": "DEBUG=app:* nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Daniel S. Waite",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.2"
+  },
+  "devDependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielSWaite190/express_web_app_mySQL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanielSWaite190/express_web_app_mySQL/issues"
+  },
+  "homepage": "https://github.com/DanielSWaite190/express_web_app_mySQL#readme"
+}
