@@ -11,11 +11,16 @@ const server = app.listen(PORT, () =>{
     console.log(`server running on ${PORT}`)
 })
 
-app.get('/', (request, response) => {
-    response.send("<h1>Hi Mom, look its Express!<h1>")
-})
+app.use(express.json())
+
 
 app.get('/engine', async(request, response) => {
-    // response.json(await seed)
+    response.json(await Engine.findAll())
+})
+app.get('/engine/:id', async(request, response) => {
+    response.json(await Engine.findByPk(request.params.id))
+})
+app.post('/engine', async(request, response) => {
+    Engine.create(request.body)
     response.json(await Engine.findAll())
 })

@@ -1,6 +1,12 @@
+import React from 'react';
+import Card from './components/cards'
+
 function App() {
   return (
-    <h1>Hi Mom, look its React!</h1>
+    <React.Fragment>
+        <h1>Hi Mom, look its React!</h1>
+        <Card/>
+    </React.Fragment>
   );
 }
 

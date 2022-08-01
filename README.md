@@ -8,3 +8,7 @@ Project Ideas:
 Final Project Ideas:
 Engine Inventory app
 React Card style app with diffrent engines and their properties.
+
+
+
+http://localhost/phpmyadmin/index.php?lang=en
