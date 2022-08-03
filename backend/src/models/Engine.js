@@ -4,8 +4,9 @@ const {Sequelize, sequelize} = require('../db');
 const Engine = sequelize.define('engine', {
   name: Sequelize.STRING,
   cycle_type: Sequelize.STRING,
-  Thrust: Sequelize.INTEGER,
-  specific_impulse: Sequelize.INTEGER
+  thrust: Sequelize.INTEGER,
+  specific_impulse: Sequelize.INTEGER,
+  image: Sequelize.STRING
 });
 
 module.exports = Engine;
