@@ -3,13 +3,13 @@ import React from 'react';
 function Card({engine}) {
     return (
         <div className="card">
-            <h1>Name{engine.name}</h1>
-            <h5>{engine.cycle_type}</h5>
-            <h5>{engine.cycle_type}</h5>
-            <h5>{engine.thrust}</h5>
-            <h5>{engine.specific_impulse}</h5>
+            <img src={engine.image} alt={'Picture of the '+engine.name} width="130" height="130" />
+            <h1>{engine.name}</h1>
+            <h5>Cycle Type: {engine.cycle_type}</h5>
+            <h5>Thrust Capacity: {engine.thrust} MN</h5>
+            <h5>Specific Impulse: {engine.specific_impulse}</h5>
         </div>
     )
 }
 
-export default Card
+export default Card;
