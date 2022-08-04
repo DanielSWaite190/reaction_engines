@@ -2,28 +2,31 @@ import React, { useParams } from 'react-router';
 import Form from '../components/Form'
 
 
-function NewEngine(dataToPost) {
+function NewEngine() {
+    //TODO fix this redundant function NewEngine & postEngine
 
-    const postEngine = async () => {
-        try {
-            const response = await fetch('http://localhost:4000/engine', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(dataToPost)
-            });
-        console.log('Engine Posted: ', dataToPost);
-        } catch(error) {
-            console.log(error.message);
-        }
-    }
+    
+    // const postEngine = async (dataToPost) => {
+    //     const url = dataToPost['id'] ? `http://localhost:4000/engine/dataToPost/${dataToPost['id']}` : `http://localhost:4000/engine`
+    //     try {
+    //         const response = await fetch(url, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(dataToPost['engine'])
+    //         });
+    //     console.log('Engine Posted: ', dataToPost['engine']);
+    //     } catch(error) {
+    //         console.log(error.message);
+    //     }
+    //     console.log(dataToPost['id'])
+    // }
 
-    postEngine()
 
   return (
     <div className='container'>
-        <Form/>
+        <Form config={{method: "POST"}}/>
     </div>
   )
 }

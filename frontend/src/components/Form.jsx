@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
-import NewEngine from '../pages/NewEngine';
 
-function EditForm() {
+function EditForm(props) {
 
     const navigate = useNavigate();
 
@@ -12,10 +11,28 @@ function EditForm() {
     const [specific_impulse, setSpecificImpulse] = useState('');
     const [image, setImage] = useState('');
 
+
+    const postEngine = async (engine) => {
+        const url = props.config['id'] ? `http://localhost:4000/engine/${props.config['id']}` : `http://localhost:4000/engine`
+        try {
+            const response = await fetch(url, {
+                method: props.config['method'],
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(engine)
+            });
+        console.log('Engine Posted: ', engine);
+        } catch(error) {
+            console.log(error.message);
+        }
+    }
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const updatedUser = {
+        const engine = {
             name,
             cycle_type,
             thrust,
@@ -23,21 +40,15 @@ function EditForm() {
             image,
         }
 
-        // buldEngine(userId, updatedUser);
-
-
         setName(name)
         setCycleType(cycle_type)
         setThrust(thrust)
         setSpecificImpulse(specific_impulse)
         setImage(image)
 
-        NewEngine(updatedUser)
+        // props.callback({engine, id: null})
+        postEngine(engine)
     }
-
-    // useEffect(() => {
-    //     getUser(userId);
-    // },[userId]);
 
     useEffect(() => {
     },[]);

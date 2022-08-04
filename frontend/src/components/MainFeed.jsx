@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Card  from "../components/Card";
+import Card  from "./Card";
 
-function Engine() {
+function MainFeed() {
     const [engine, setEngine] = useState([]);
 
     const getData = async () => {
@@ -21,4 +21,4 @@ function Engine() {
     )
 }
 
-export default Engine;
+export default MainFeed;
