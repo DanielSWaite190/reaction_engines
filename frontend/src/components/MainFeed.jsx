@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Card  from "./Card";
+import DisplayCard  from "./DisplayCard";
 
 function MainFeed() {
     const [engine, setEngine] = useState([]);
@@ -16,7 +16,7 @@ function MainFeed() {
 
     return (
         <div id="cards">
-            {engine.map((item) => <Card engine={item} key={item.id}/>)} 
+            {engine.map((item) => <DisplayCard engine={item} key={item.id}/>)} 
         </div>
     )
 }

@@ -1,10 +1,18 @@
 import React from 'react-router';
+import { useParams } from 'react-router-dom';
 import Form from '../components/Form'
 
+
+
 function EdditEngine() {
+
+  const {id} = useParams();
+  const method = id ? 'PUT' : 'POST';
+
+
   return (
     <div className='container'>
-        <Form config={{method: "PUT", id: 142}}/>
+        <Form config={{method: method, id: id}}/>
     </div>
   )
 }
