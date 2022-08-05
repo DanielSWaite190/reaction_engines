@@ -1,13 +1,12 @@
 import './App.css';
 import React from 'react';
-import MainFeed from './components/MainFeed'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import MainFeed from './components/MainFeed'
+import DetailCard from './components/DetailCard'
 import NewEngine from './pages/NewEngine'
 import EdditEngine from './pages/EdditEngine'
-import DetailCard from './components/DetailCard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 
 function App() {
   return (

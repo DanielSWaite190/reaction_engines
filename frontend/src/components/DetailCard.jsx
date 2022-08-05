@@ -2,20 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-function DetailCard(props) {
+function DetailCard() {
 
     const {id} = useParams();
     const [engine, setEngine] = useState([]);
 
-
     const getData = async () => {
         const response = await fetch(`http://localhost:4000/engine/${id}`);
         const data = await response.json();
+        console.log('getData')
         setEngine(data)
-        console.log('hi')
     }
-
-    // console.log('Here', id, engine)
 
     useEffect(() => {
         getData()

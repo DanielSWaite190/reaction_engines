@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function DisplayCard(props) {
+export default function DisplayCard(props) {
     return (
         <div className="card">
             <img src={props.engine.image} alt={'Picture of the '+props.engine.name} width="130" height="130" />
@@ -13,5 +13,3 @@ function DisplayCard(props) {
         </div>
     )
 }
-
-export default DisplayCard;

@@ -1,21 +1,20 @@
-import React, {useState, useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
 
 function EditForm(props) {
-
-    const navigate = useNavigate();
-
+    
     const [name, setName] = useState('');
     const [cycle_type, setCycleType] = useState('');
     const [thrust, setThrust] = useState('');
     const [specific_impulse, setSpecificImpulse] = useState('');
     const [image, setImage] = useState('');
 
-
     const postEngine = async (engine) => {
-        const url = props.config['id'] ? `http://localhost:4000/engine/${props.config['id']}` : `http://localhost:4000/engine`
+        const url = props.config['id'] ? 
+        `http://localhost:4000/engine/${props.config['id']}` :
+        `http://localhost:4000/engine`;
+
         try {
-            const response = await fetch(url, {
+            fetch(url, {
                 method: props.config['method'],
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,11 +22,12 @@ function EditForm(props) {
                 body: JSON.stringify(engine)
             });
         console.log('Engine Posted: ', engine);
+        props.callback()
+
         } catch(error) {
             console.log(error.message);
         }
     }
-
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -46,22 +46,19 @@ function EditForm(props) {
         setSpecificImpulse(specific_impulse)
         setImage(image)
 
-        // props.callback({engine, id: null})
+        console.log('handleSubmit')
         postEngine(engine)
     }
-
-    useEffect(() => {
-    },[]);
-
+    
   return (
     <div className='edit-form'>
         <div className="container">
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Enter First Name' value={name} onChange={(event) => setName(event.target.value)} />
-                <input type='text' placeholder='Enter Last Name' value={cycle_type} onChange={(event) => setCycleType(event.target.value)} />
-                <input type='text' placeholder='Enter Email' value={thrust} onChange={(event) => setThrust(event.target.value)} />
-                <input type='text' placeholder='Enter Avatar URL' value={specific_impulse} onChange={(event) => setSpecificImpulse(event.target.value)} />
-                <input type='text' placeholder='Enter Job Title' value={image} onChange={(event) => setImage(event.target.value)} />
+                <input type='text' placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
+                <input type='text' placeholder='Cycle Type' value={cycle_type} onChange={(event) => setCycleType(event.target.value)} />
+                <input type='text' placeholder='Thrust' value={thrust} onChange={(event) => setThrust(event.target.value)} />
+                <input type='text' placeholder='Specific Inpulse' value={specific_impulse} onChange={(event) => setSpecificImpulse(event.target.value)} />
+                <input type='text' placeholder='image url' value={image} onChange={(event) => setImage(event.target.value)} />
                 <button type='update'>Submit</button>
             </form>
         </div>
