@@ -10,7 +10,6 @@ function DetailCard() {
     const getData = async () => {
         const response = await fetch(`http://localhost:4000/engine/${id}`);
         const data = await response.json();
-        console.log('getData')
         setEngine(data)
     }
 
