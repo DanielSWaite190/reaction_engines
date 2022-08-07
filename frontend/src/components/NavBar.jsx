@@ -1,10 +1,20 @@
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
-    return (
-    <nav>
-        <Link to='/' className='link-btn-user'>Home</Link>
-        <Link to='/new' className='link-btn-user'>New</Link>
-      </nav>
-    )
+  return(
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/new">Add A Engine</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  )
 }

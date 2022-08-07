@@ -15,6 +15,7 @@ export default function EdditEngine() {
 
   return (
     <div className='container'>
+        <h3>Eddit your engine</h3>
         <Form config={{method: 'PUT', id: id}}/>
         <button onClick={Delete} type="button">DELETE</button>
     </div>

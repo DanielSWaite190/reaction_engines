@@ -1,9 +1,14 @@
 @media (prefers-color-scheme: dark) {
   body {
     background-color: black;
-    color: white;
+    color: gray;
   }
 }
+
+/* body{
+  background-image: url("https://wallpaperaccess.com/full/1268183.jpg");
+} */
+
 
 /* #cards{
   display: flex;

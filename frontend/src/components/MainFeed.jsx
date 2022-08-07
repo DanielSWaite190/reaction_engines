@@ -14,31 +14,21 @@ function MainFeed() {
         getData()
     }, []);
 
-    // return (
-    //     <div id="cards">
-    //         {engine.map((item) => <DisplayCard engine={item} key={item.id}/>)} 
-    //     </div>
-    // )
-
     return (
-        <div class="container">
+        <div class="container py-5">
             <div class="row">
                 {
                     engine.map((item) =>{ 
                         if(item.id % 2 == 0)
                             return (
-                                <div className="col-6">
-                                    <div class="p-5">
-                                        <DisplayCard engine={item} key={item.id}/>
-                                    </div>
+                                <div className="col-6 py-3 d-flex justify-content-center">
+                                    <DisplayCard engine={item} key={item.id}/>
                                 </div>
                             )
                         else
                             return (
-                                <div className="col-6">
-                                    <div class="p-5">
-                                        <DisplayCard engine={item} key={item.id}/>
-                                    </div>
+                                <div className="col-6 py-3 d-flex justify-content-center">
+                                    <DisplayCard engine={item} key={item.id}/>
                                 </div>
                             )
                     })
