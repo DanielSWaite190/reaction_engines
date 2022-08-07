@@ -14,9 +14,36 @@ function MainFeed() {
         getData()
     }, []);
 
+    // return (
+    //     <div id="cards">
+    //         {engine.map((item) => <DisplayCard engine={item} key={item.id}/>)} 
+    //     </div>
+    // )
+
     return (
-        <div id="cards">
-            {engine.map((item) => <DisplayCard engine={item} key={item.id}/>)} 
+        <div class="container">
+            <div class="row">
+                {
+                    engine.map((item) =>{ 
+                        if(item.id % 2 == 0)
+                            return (
+                                <div className="col-6">
+                                    <div class="p-5">
+                                        <DisplayCard engine={item} key={item.id}/>
+                                    </div>
+                                </div>
+                            )
+                        else
+                            return (
+                                <div className="col-6">
+                                    <div class="p-5">
+                                        <DisplayCard engine={item} key={item.id}/>
+                                    </div>
+                                </div>
+                            )
+                    })
+                }
+            </div>
         </div>
     )
 }
