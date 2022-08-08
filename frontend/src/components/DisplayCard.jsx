@@ -12,7 +12,11 @@ export default function DisplayCard(props) {
                 <p class="card-text">Cycle Type: {props.engine.cycle_type}</p>
                 <p class="card-text">Thrust Capacity: {props.engine.thrust} MN</p>
                 <p class="card-text">Specific Impulse: {props.engine.specific_impulse}</p>
-                <Link to={`engine/${props.engine.id}`} className='link-btn-user'>Open</Link>
+                <div className="text-center">
+                    <div class="text-center btn btn-dark">
+                        <Link to={`engine/${props.engine.id}`} className='link-btn-user'>Open</Link>
+                    </div>
+                </div>
             </div>
         </div>
     )

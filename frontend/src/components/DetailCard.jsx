@@ -20,15 +20,28 @@ function DetailCard() {
     return (
         <div className="container bg-dark">
 
-            <div className="card container " style={{width: "30rem", height: "30rem"}}>
+            <div className="card container " style={{width: "35rem", height: "35rem"}}>
 
-                <div className="container text-center bg-primary">
-                    <img src={engine.image} alt={'Picture of the '+engine.name} width="300" height="300" />
-                    <h1>{engine.name}</h1>
-                    <h5>Cycle Type: {engine.cycle_type}</h5>
-                    <h5>Thrust Capacity: {engine.thrust} MN</h5>
-                    <h5>Specific Impulse: {engine.specific_impulse}</h5>
-                    <Link to={`/engine/${engine.id}/eddit`} className='link-btn-user'>Eddit</Link>
+                <div className="row">
+                    <div class="text-center"><h1>{engine.name}</h1></div>
+                   
+                    <img src={engine.image} alt={'Picture of the '+engine.name} width="300" height="300" style={{"object-fit": "contain"}}/>
+                    
+                    <div className="col">
+                        <p>Cycle Type: {engine.cycle_type}</p>
+                        <p>Thrust Capacity: {engine.thrust} MN</p>
+                        <p>Thrust To Weight Ration: {engine.thrust_to_weight}:1</p>
+                    </div>
+                    
+                    <div className="col">
+                        <p>Specific Impulse (Sea Level): {engine.specific_impulse_cl}</p>
+                        <p>Specific Impulse (vacuum): {engine.specific_impulse_vac}</p>
+                        <p>Chamber Pressure: {engine.pressure}</p>
+                    </div>
+                    
+                    <div class="text-center btn">
+                        <Link to={`/engine/${engine.id}/eddit`} className='link-btn-user'>Eddit</Link>
+                    </div>
                 </div>
 
             </div>
