@@ -6,6 +6,8 @@ export default function EdditEngine() {
   const {id} = useParams();
   const navigate = useNavigate();
 
+  const goHome = () => {navigate('/')}
+
   const Delete = () => {
     fetch(`http://localhost:4000/engine/${id}`, {
       method: 'DELETE'
@@ -16,7 +18,7 @@ export default function EdditEngine() {
   return (
     <div className='container'>
         <h3>Eddit your engine</h3>
-        <Form config={{method: 'PUT', id: id}}/>
+        <Form config={{method: 'PUT', id: id}} callback={goHome}/>
         <button onClick={Delete} type="button">DELETE</button>
     </div>
   )

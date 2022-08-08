@@ -1,11 +1,14 @@
 const {Sequelize, sequelize} = require('../db');
-// const { Sequelize } = require('sequelize');
 
 const Engine = sequelize.define('engine', {
   name: Sequelize.STRING,
   cycle_type: Sequelize.STRING,
+  fule_type: Sequelize.STRING,
   thrust: Sequelize.INTEGER,
-  specific_impulse: Sequelize.INTEGER,
+  thrust_to_weight: Sequelize.STRING,
+  specific_impulse_cl: Sequelize.INTEGER,
+  specific_impulse_vac: Sequelize.INTEGER,
+  pressure: Sequelize.INTEGER,
   image: Sequelize.STRING
 });
 

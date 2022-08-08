@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"5.2.0","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"engines"},
+{"type":"table","name":"engines","database":"engines","data":
+[
+{"id":"1","name":"Merlin","cycle_type":"Open","fule_type":"RP-1","thrust":"1","thrust_to_weight":"198","specific_impulse_cl":"282","specific_impulse_vac":"311","pressure":"97","image":"https:\/\/external-preview.redd.it\/zyI5OXfL8LUXy6wGrrX91ah5N8dkVdr0hBbpW55iTig.jpg?auto=webp&s=613c3ccb9f0aab2a76f0f076731478c3fd6aeb05","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"},
+{"id":"2","name":"RD-180","cycle_type":"Closed, Lox rich","fule_type":"RP-1","thrust":"4","thrust_to_weight":"78:1","specific_impulse_cl":"311","specific_impulse_vac":"338","pressure":"257","image":"https:\/\/static.turbosquid.com\/Preview\/2020\/06\/07__13_49_29\/RocketEngineRD180.jpg0B35386C-EB78-478C-A46F-E8A1A0A20105Zoom.jpg","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"},
+{"id":"3","name":"F-1","cycle_type":"Open","fule_type":"RP-1","thrust":"7","thrust_to_weight":"94:1","specific_impulse_cl":"263","specific_impulse_vac":"304","pressure":"70","image":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2013\/03\/eande-f1scale.jpg","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"},
+{"id":"4","name":"Raptor","cycle_type":"Full Flow","fule_type":"Methane","thrust":"2","thrust_to_weight":"107:1","specific_impulse_cl":"330","specific_impulse_vac":"350","pressure":"270","image":"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/2\/27\/SpaceX_sea-level_Raptor_at_Hawthorne_-_2.jpg","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"},
+{"id":"5","name":"BE-4","cycle_type":"Closed, Lox Rich","fule_type":"Methane","thrust":"2","thrust_to_weight":"80:1","specific_impulse_cl":"310","specific_impulse_vac":"340","pressure":"135","image":"https:\/\/spaceflightnow.com\/wp-content\/uploads\/2017\/05\/C6PUsspWYAAVu1Z.jpg","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"},
+{"id":"6","name":"RS-25","cycle_type":"Closed, Fuel rich","fule_type":"Hydrogen","thrust":"2","thrust_to_weight":"73:1","specific_impulse_cl":"366","specific_impulse_vac":"452","pressure":"206","image":"https:\/\/exploredeepspace.com\/wp-content\/uploads\/2014\/08\/phototour.png","createdAt":"2022-08-08 03:00:13","updatedAt":"2022-08-08 03:00:13"}
+]
+}
+]

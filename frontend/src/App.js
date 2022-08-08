@@ -19,7 +19,7 @@ function App() {
             <Route path="/engine/:id" element={<DetailCard />} />
             <Route path="/engine/:id/eddit" element={<EdditEngine />} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </main>
     </Router>
   );
