@@ -60,21 +60,6 @@ function EditForm(props) {
 
         postEngine(engine)
     }
-    
-    // return(
-    //     <div className='edit-form'>
-    //             <div className="container">
-    //                 <form onSubmit={handleSubmit}>
-    //                     <input type='text' placeholder='Name' value={name} onChange={(event) => setName(event.target.value)} />
-    //                     <input type='text' placeholder='Cycle Type' value={cycle_type} onChange={(event) => setCycleType(event.target.value)} />
-    //                     <input type='text' placeholder='Thrust' value={thrust} onChange={(event) => setThrust(event.target.value)} />
-    //                     <input type='text' placeholder='Specific Inpulse' value={specific_impulse} onChange={(event) => setSpecificImpulse(event.target.value)} />
-    //                     <input type='text' placeholder='image url' value={image} onChange={(event) => setImage(event.target.value)} />
-    //                     <button type='update'>Submit</button>
-    //                 </form>
-    //             </div>
-    //     </div>
-    // )
 
     return(
         <div class="container my-5">
