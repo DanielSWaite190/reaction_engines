@@ -10,7 +10,7 @@ export default function Footer() {
                     <a href="https://www.blueorigin.com/" className='col nav-link active ft'>Blue Origin</a>
                 </div>
                 <div className="col link-btn-user btn">
-                    <a href="https://firefly.com/" className='col nav-link active ft'>Firefly</a>
+                    <a href="https://fireflyspace.com/" className='col nav-link active ft'>Firefly</a>
                 </div>
             </div>
         </div>
